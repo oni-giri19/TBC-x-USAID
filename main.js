@@ -12,3 +12,13 @@ window.addEventListener("scroll", () => {
     header.classList.remove("transparent");
   }
 });
+//sidebar toggle when screen is 700px and less
+const toggleBtn = document.querySelector(".toggle-btn");
+const closeBtn = document.querySelector(".close-btn");
+const dropdown = document.querySelector(".dropdown-menu");
+toggleBtn.addEventListener("click", function () {
+  dropdown.classList.toggle("active");
+});
+closeBtn.addEventListener("click", function () {
+  dropdown.classList.remove("active");
+});
