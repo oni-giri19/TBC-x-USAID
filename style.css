@@ -182,6 +182,87 @@ nav p {
   padding-top: 5px;
   color: #00aeef;
 }
+/* partners section styles  */
+.partners-section {
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+.partners-title {
+  color: #f4f4f4;
+  margin: 40px 0 40px 0;
+  padding-left: 185px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  height: 224px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+.slide-img {
+  /* width: 100%; */
+  text-align: center;
+}
+
+.slide-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #f4f4f4;
+}
+.carousel-btn:hover {
+  color: #f4f4f47c;
+}
+.carousel-btn-left {
+  top: 58%;
+  left: 120px;
+}
+.carousel-btn-right {
+  top: 58%;
+  right: 120px;
+}
+.slide-dots {
+  position: absolute;
+  left: 49%;
+  top: 83%;
+}
+.slide-dots ul {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  margin-right: 5px;
+}
+.slide-dots ul li {
+  list-style: none;
+}
+.slide-dots ul li a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
 /* SMALL SCREENS */
 @media only screen and (max-width: 700px) {
   /* site header properties */
@@ -270,6 +351,25 @@ nav p {
   .cards {
     justify-content: center;
   }
+  /* carousel properties */
+  .partners-title {
+    padding-left: 34px;
+  }
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .slide-img img {
+    max-width: 92%;
+  }
+  .carousel-btn {
+    display: none;
+  }
+  .slide-dots {
+    top: 93%;
+    left: 45%;
+  }
 }
 @media (max-width: 346px) {
   .description-title h3 span {
@@ -281,5 +381,9 @@ nav p {
   /* card section properties  */
   .card-img img {
     width: 270px;
+  }
+  /* carousel properties  */
+  .partners-title h2 {
+    font-size: 18px;
   }
 }

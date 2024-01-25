@@ -22,3 +22,31 @@ toggleBtn.addEventListener("click", function () {
 closeBtn.addEventListener("click", function () {
   dropdown.classList.remove("active");
 });
+//partners section carousel logic
+const carousel = document.querySelector(".carousel");
+let currentIndex = 0;
+
+function showSlide(index) {
+  currentIndex = index;
+  const translateValue = -index * carousel.clientWidth + "px";
+  carousel.style.transform = "translateX(" + translateValue + ")";
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % 3;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + 3) % 3;
+  showSlide(currentIndex);
+}
+
+function goToSlide(index) {
+  currentIndex = index;
+  showSlide(currentIndex);
+}
+// Auto-play carousel
+setInterval(() => {
+  nextSlide();
+}, 10000); // Change slide every 10 seconds
