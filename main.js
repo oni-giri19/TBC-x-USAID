@@ -50,3 +50,17 @@ function goToSlide(index) {
 setInterval(() => {
   nextSlide();
 }, 10000); // Change slide every 10 seconds
+//questions section accordion logic
+let accordions = document.querySelectorAll(".accordion-wrapper .accordion");
+accordions.forEach((accordion) => {
+  accordion.onclick = () => {
+    if (accordion.classList.contains("active")) {
+      accordion.classList.remove("active");
+    } else {
+      accordions.forEach((subcontent) => {
+        subcontent.classList.remove("active");
+      });
+      accordion.classList.add("active");
+    }
+  };
+});
