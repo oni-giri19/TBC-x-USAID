@@ -358,6 +358,79 @@ nav p {
 .all-questions-bottom:hover {
   color: #f8f6faa1;
 }
+/* footer styles */
+.footer-section {
+  background-color: #1a1e1f;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  padding-left: 178px;
+  padding-right: 178px;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "tbc-logo socials"
+    "footer-text footer-btn";
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.tbc-logo {
+  grid-area: tbc-logo;
+}
+.socials {
+  grid-area: socials;
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+}
+.socials a {
+  border: none;
+  cursor: pointer;
+  background-color: #1a1e1f;
+}
+.footer-text {
+  grid-area: footer-text;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-text p {
+  color: #f4f4f4;
+}
+.footer-text button {
+  border: none;
+  background-color: #1a1e1f;
+  color: #f4f4f4;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+  width: 151px;
+}
+.footer-text button:hover {
+  color: #f4f4f479;
+}
+.footer-btn {
+  grid-area: footer-btn;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-btn button {
+  padding: 9px 34px;
+  height: 42px;
+  width: 161.3px;
+  border: none;
+  background-color: #00aef3;
+  color: #f4f4f4;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.footer-btn button:hover {
+  background-color: #d1cdcdd7;
+  color: #2b2b2b;
+}
+
 @keyframes animate {
   0% {
     transform: scaleY(0);
@@ -474,6 +547,11 @@ nav p {
   .questions-title a {
     display: none;
   }
+  /* footer properties  */
+  .footer-section {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
 }
 @media (max-width: 346px) {
   .description-title h3 span {
@@ -500,5 +578,32 @@ nav p {
   }
   .all-questions-bottom {
     display: block;
+  }
+  /* footer properties  */
+  .footer-section {
+    padding-top: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .grid-container {
+    grid-template-areas:
+      "tbc-logo tbc-logo"
+      "footer-btn socials"
+      "footer-text footer-text";
+    gap: 10px;
+  }
+  .footer-btn {
+    justify-content: flex-start;
+  }
+  .footer-btn button {
+    padding: 5px 9px;
+    height: 37px;
+    width: 122px;
+  }
+  .footer-text {
+    flex-direction: column-reverse;
+  }
+  .tbc-logo {
+    margin-bottom: 15px;
   }
 }
